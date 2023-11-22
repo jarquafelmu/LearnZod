@@ -5,6 +5,9 @@ const UserSchema = z.object({
   age: z.number().optional(),
   birthday: z.date().optional(),
   isProgrammer: z.boolean().optional(),
+
+  // this key can never be present, if it is present the schema will fail
+  test: z.never(),
 });
 
 // with infer we can get the type of the schema
